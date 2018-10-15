@@ -1,0 +1,37 @@
+{
+   "id": "9390bb97-62c8-4465-a6f9-6ff8035e3d8c",
+   "name": "DeployProject",
+   "friendlyName": "Deploy Project",
+   "description": "Deploys files to CurseForge",
+   "helpMarkDown": "[More Information](https://url.to/yourmarkdown)",
+   "category": "Deploy",
+   "visibility": ["Build","Release"],
+   "author": "",
+   "version": {
+      "Major": 1,
+      "Minor": 0,
+      "Patch": 0
+   },
+   "demands": [],
+   "inputs": [
+      {
+         "name": "variable1",
+         "type": "filePath",
+         "label": "Path to Solution File",
+         "defaultValue": "",
+         "required": true
+      },
+      {
+         "name": "variable2",
+         "type": "string",
+         "label": "Sample text variable",
+         "defaultValue": "",
+         "required": false,
+         "helpMarkDown": "This will give you a hover-over tooltip"
+      }
+   ],
+   "instanceNameFormat": "DeployProject",
+   "execution":
+    {"Node":{"target":"DeployProject.js"}}
+   
+}
