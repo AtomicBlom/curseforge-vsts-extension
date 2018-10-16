@@ -1,6 +1,6 @@
 {
     "id": "9390bb97-62c8-4465-a6f9-6ff8035e3d8c",
-    "name": "DeployProject",
+    "name": "DeployCurseForgeProject",
     "friendlyName": "Deploy CurseForge Project",
     "description": "Deploys files to CurseForge",
     "helpMarkDown": "[More Information](https://url.to/yourmarkdown)",

@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "curseforgetasks",
-  "version": "0.1.21",
+  "version": "0.1.26",
   "name": "CurseForge Tasks",
   "scopes": [],
   "description": "Tasks for deploying mods and other artifacts to CurseForge",

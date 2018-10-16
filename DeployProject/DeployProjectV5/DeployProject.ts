@@ -1,18 +1,16 @@
 import tl = require('azure-pipelines-task-lib/task');
+import { ConnectedService } from './CurseForgeAPI/ConnectedService';
+
 //npm install vsts-task-lib
 
 // Get task parameters
-let variable1: string = tl.getPathInput('variable1', false, true);
-let variable2: string = tl.getInput('variable2', true);
-
-
+let serviceName: string = tl.getInput('CurseForgeService', true);
 
 async function run() {
     try {
-        //do your actions
-        tl.debug('variable1:' +variable1)
-        tl.debug('variable2:' +variable2)
-        
+
+        const service = new ConnectedService(serviceName);
+        tl.debug('CurseForgeService:' + serviceName)
     } catch (err) {
         tl.setResult(tl.TaskResult.Failed, err.message);
     }
