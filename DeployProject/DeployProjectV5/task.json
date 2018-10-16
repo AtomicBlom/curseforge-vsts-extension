@@ -9,7 +9,7 @@
     "author": "",
     "version": {
         "Major": 5,
-        "Minor": 2,
+        "Minor": 3,
         "Patch": 0
     },
     "demands": [],
@@ -27,11 +27,19 @@
             "type": "pickList",
             "label": "Game Versions",
             "defaultValue": "",
-            "required": true,
-            "helpMarkDown": "The game versions this upload supports",
+            "required": false,
+            "helpMarkDown": "* not currently supported",
             "properties": {
                 "EditableOptions": "True"
             }
+        },
+        {
+            "name": "ProjectFile",
+            "type": "filePath",
+            "label": "File to publish",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "The file to publish to CurseForge"
         }
     ],
     "dataSourceBindings": [{
