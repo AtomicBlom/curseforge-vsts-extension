@@ -6,10 +6,10 @@
     "helpMarkDown": "[More Information](https://url.to/yourmarkdown)",
     "category": "Deploy",
     "visibility": ["Build", "Release"],
-    "author": "",
+    "author": "Steven Blom",
     "version": {
         "Major": 5,
-        "Minor": 3,
+        "Minor": 11,
         "Patch": 0
     },
     "demands": [],
@@ -23,6 +23,13 @@
             "helpMarkDown": "Select the CurseForge end point to use. If needed, click on 'manage', and add a new service endpoint of type 'CurseForge server connection'"
         },
         {
+            "name": "Project",
+            "type": "string",
+            "label": "Project",
+            "description": "The Project ID",
+            "pattern": "^[0-9]+$"
+        },
+        {
             "name": "GameVersion",
             "type": "pickList",
             "label": "Game Versions",
@@ -31,6 +38,18 @@
             "helpMarkDown": "* not currently supported",
             "properties": {
                 "EditableOptions": "True"
+            }
+        },
+        {
+            "name": "ReleaseType",
+            "type": "pickList",
+            "label": "Release Type",
+            "defaultValue": "alpha",
+            "required": true,
+            "options": {
+                "alpha": "Alpha",
+                "beta": "Beta",
+                "release": "Release"
             }
         },
         {
