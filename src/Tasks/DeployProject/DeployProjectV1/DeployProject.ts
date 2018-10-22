@@ -1,6 +1,5 @@
 import * as tl from 'azure-pipelines-task-lib/task';
 import * as unirest from 'unirest';
-import { IProjectUpload } from './IProjectUpload';
 
 let serviceName: string = tl.getInput('CurseForgeService', true);
 let file = tl.getPathInput("ProjectFile", true, true);
@@ -34,3 +33,22 @@ async function run() {
 }
 
 run();
+
+//---------------------------------------
+//API Definitions
+interface IProjectUpload {
+    changelog: string;
+    changelogType?: "text" | "html" | "markdown";
+    displayName?: string;
+    parentFileID?: number;
+    gameVersions?: number[];
+    releaseType: "alpha" | "beta" | "release"
+    relations?: {
+        projects: IProjectReference[];
+    } 
+}
+
+interface IProjectReference {
+    slug: string;
+    type: "embeddedLibrary" | "incompatible" | "optionalDependency" | "requiredDependency" | "tool"
+}
