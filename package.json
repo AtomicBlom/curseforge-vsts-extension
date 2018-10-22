@@ -4,7 +4,8 @@
     "gallery-publish": "npm run clean  && npm run compile && tfx extension publish --rev-version",
     "clean": "rimraf ./*.vsix",
     "compile": "tsc -p .",
-    "install-task-lib": "cd DeployProject && npm install --save-dev"
+    "install-task-lib": "cd DeployProject && npm install --save-dev",
+    "preinstall": "node install-recursive.js"
   },
   "devDependencies": {
     "@types/node": "^8.0.7",
